@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% elif config.description %}
+    <meta name="description" content="{{ config.description }}">
+    {% endif %}
+    
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+    
+    <!-- Syntax highlighting theme -->
+    <link rel="stylesheet" href="{{ get_url(path="syntax.css") }}">
+    
+    <!-- Optional: Load Mermaid for diagrams only when needed -->
+    {% if page.extra.has_diagrams %}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        // Mermaid theme based on current theme
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const mermaidTheme = currentTheme === 'dark' ? 'dark' : 'neutral';
+        mermaid.initialize({startOnLoad: true, theme: mermaidTheme});
+    </script>
+    {% endif %}
+    
+    <!-- System Theme Detection -->
+    <script>
+        // Respect system preference only
+        function setThemeFromSystem() {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', systemTheme);
+        }
+        
+        // Set initial theme
+        setThemeFromSystem();
+        
+        // Listen for system theme changes and update automatically
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setThemeFromSystem);
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><a href="{{ get_url(path="") }}">{{ config.title }}</a></h1>
+            <nav>
+                <a href="{{ get_url(path="") }}">Home</a>
+                <a href="{{ get_url(path="about") }}">About</a>
+                {% if config.extra.github %}
+                <a href="{{ config.extra.github }}" target="_blank">GitHub</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author | default(value="") }}.</p>
+        </div>
+    </footer>
+</body>
+</html>

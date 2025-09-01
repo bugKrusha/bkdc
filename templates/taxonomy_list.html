@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="intro">
+    <h2>All Tags</h2>
+    <p>Browse posts by topic.</p>
+</div>
+
+<div class="tags-list">
+    {% for term in terms %}
+    <div class="tag-item">
+        <a href="{{ term.permalink }}" class="tag-link">
+            <span class="tag-name">{{ term.name }}</span>
+            <span class="tag-count">({{ term.pages | length }})</span>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="intro">
+    <h2>Posts tagged "{{ term.name }}"</h2>
+    <p>{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %} found.</p>
+</div>
+
+<div class="posts">
+    {% for page in term.pages %}
+    <article class="post-preview">
+        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+        
+        <div class="post-meta">
+            <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+            {% if config.extra.show_reading_time and page.reading_time %}
+            <span class="reading-time">{{ page.reading_time }} min read</span>
+            {% endif %}
+        </div>
+        
+        {% if page.description %}
+        <p class="post-description">{{ page.description }}</p>
+        {% elif page.summary %}
+        <p class="post-description">{{ page.summary | safe }}</p>
+        {% endif %}
+        
+        {% if page.taxonomies.tags %}
+        <div class="tags">
+            {% for tag in page.taxonomies.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+
+<div style="margin-top: 2rem;">
+    <a href="{{ get_url(path="tags") }}">&larr; All Tags</a>
+</div>
+{% endblock content %}
