@@ -1,6 +1,6 @@
 +++
 title = "Fossils"
-date = 2025-09-01
+date = 2026-02-09
 
 description = "Meditation on unfinished thoughts and the quiet violence of imagined objections."
 
