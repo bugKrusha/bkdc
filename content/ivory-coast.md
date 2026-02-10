@@ -1,6 +1,7 @@
 +++
 title = "Côte d'Ivoire"
-date = 2025-11-12
+date = 2026-11-12
+draft = true
 
 description = "A reflection on how visible journeys give people who share our origins a sense of recognition, possibility, and permission"
 
