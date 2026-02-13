@@ -382,6 +382,35 @@ body {
     }
 }
 
+/* Footnote definitions (Zola-generated) */
+.footnote-definition:first-of-type {
+    margin-top: 1.5rem;
+}
+
+.footnote-definition {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.footnote-definition-label::after {
+    content: ".";
+}
+
+.footnote-definition-label {
+    flex-shrink: 0;
+    min-width: 1.2em;
+    vertical-align: baseline;
+    font-size: inherit;
+    top: 0;
+}
+
+.footnote-definition p {
+    margin: 0;
+}
+
 .post-footnote {
     margin-top: 3rem;
     padding-top: 1rem;
