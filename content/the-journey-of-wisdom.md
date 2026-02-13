@@ -1,6 +1,7 @@
 +++
 title = "Wisdom's Journey"
 date = 2026-02-12
+draft=true
 
 description = "If the destination matters, the route is negotiable."
 
@@ -8,7 +9,7 @@ description = "If the destination matters, the route is negotiable."
 tags = ["Journeys"]
 +++
 
-As a child, I had this affinity for reading non-fiction. My favorite was [Modern Ways to Health](https://www.amazon.com/Modern-ways-health-Clifford-Anderson/dp/B0007C4B10), a pair of encyclopedias my mom kept in the house. This is where I first learned that the fallopian tubes have no physical connection to the ovaries[^1], yet the reproductive system finds a way to deliver eggs across that gap every month—flabbergasted.
+As a child in Jamaica, I had this affinity for reading non-fiction. My favorite was [Modern Ways to Health](https://www.amazon.com/Modern-ways-health-Clifford-Anderson/dp/B0007C4B10), a pair of encyclopedias my mom kept in the house. This is where I first learned that the fallopian tubes have no physical connection to the ovaries[^1], yet the reproductive system finds a way to deliver eggs across that gap every month—flabbergasted.
 
 I am not sure if these encyclopedias led to or merely sustained my fascination with biological systems, but I knew early on that I wanted to study medicine, and I learned a lot from these books. I spent the better part of 18 years pursuing that destination.
 
@@ -36,7 +37,7 @@ Some things don't just change your life, they change its trajectory. This feels 
 
 But this isn't about me. It is about you.
 
-As a child in Jamaica, I took the same path through the valley where we had fruit trees—oranges, avocado, rose apple, mangos. In the third grade I busted my face falling from a [Cacao tree](https://en.wikipedia.org/wiki/Theobroma_cacao). I walked about a half a mile back home screaming for mom[^6], eye bloody, on that path. 
+Growing up, I took the same path through the valley where we had fruit trees—oranges, avocado, rose apple, mangos—multiple times. In the third grade I busted my face falling from a [Cacao tree](https://en.wikipedia.org/wiki/Theobroma_cacao). I walked about a half a mile back home screaming for mom[^6], eye bloody, on that path. 
 
 I went back home last week and that path wasn't there—the path I spent 20 years traversing was gone. But you know what was present? The fruit trees. The path had changed, but the destination remained intact. The big [Number 11 mango tree](https://www.jamaicaoceanviewvilla.com/the-best-jamaican-mangoes-a-definitive-guide/) is still one of the primary drivers in that ecosystem[^8].
 
